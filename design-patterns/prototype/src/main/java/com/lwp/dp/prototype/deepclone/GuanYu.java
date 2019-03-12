@@ -10,6 +10,14 @@ import java.util.Date;
 public class GuanYu extends Person implements Cloneable, Serializable {
     private QingLongDaDao qingLongDaDao;
 
+    public QingLongDaDao getQingLongDaDao() {
+        return qingLongDaDao;
+    }
+
+    public void setQingLongDaDao(QingLongDaDao qingLongDaDao) {
+        this.qingLongDaDao = qingLongDaDao;
+    }
+
     public GuanYu(QingLongDaDao qingLongDaDao) {
         this.birthday = new Date();
         this.qingLongDaDao = new QingLongDaDao();
@@ -42,5 +50,14 @@ public class GuanYu extends Person implements Cloneable, Serializable {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public Object shallowClone(GuanYu target) {
+        GuanYu guanYu = new GuanYu(target.qingLongDaDao);
+        guanYu.birthday = new Date();
+        guanYu.qingLongDaDao = target.qingLongDaDao;
+        guanYu.age = target.age;
+        guanYu.name = target.name;
+        return guanYu;
     }
 }

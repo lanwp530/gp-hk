@@ -11,8 +11,12 @@ public class GuanYuTest {
         GuanYu guanYu = new GuanYu(qingLongDaDao);
 
         GuanYu guanYu1 = (GuanYu) guanYu.clone();
+        GuanYu guanYuShallow = (GuanYu) guanYu.shallowClone(guanYu);
         System.out.println(guanYu);
         System.out.println(guanYu1);
-        System.out.println( "关于是否同一个对象：" + (guanYu == guanYu1));
+        System.out.println( "深克隆是否同一个对象：" + (guanYu == guanYu1));
+        System.out.println("-------");
+        System.out.println( "浅克隆是否同一个对象：" + (guanYu == guanYuShallow));
+        System.out.println( "QingLongDaDao是否同一个对象：" + (guanYu.getQingLongDaDao() == guanYuShallow.getQingLongDaDao()));
     }
 }
