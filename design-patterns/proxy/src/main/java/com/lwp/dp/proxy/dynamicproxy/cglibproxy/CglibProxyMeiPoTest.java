@@ -14,7 +14,7 @@ public class CglibProxyMeiPoTest  {
 
     public static void main(String[] args) {
 
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "E://cglib_proxy_classes");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "E:/cglib_proxy_classes");
 
         Object instance = null;
         try {
