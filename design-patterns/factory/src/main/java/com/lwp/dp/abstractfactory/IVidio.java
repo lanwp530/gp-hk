@@ -5,4 +5,5 @@ package com.lwp.dp.abstractfactory;
  * @Date 2019/3/9 1:19
  */
 public interface IVidio {
+    void playVidio();
 }

@@ -1,6 +1,8 @@
-package com.lwp.dp.simplefactory;
+package com.lwp.dp.factorymethod;
 
 import com.lwp.dp.BaoMaCar;
+import com.lwp.dp.ICar;
+import com.lwp.dp.simplefactory.CarFactory;
 
 /**
  * @Author lanwp
@@ -8,8 +10,7 @@ import com.lwp.dp.BaoMaCar;
  */
 public class Main {
     public static void main(String[] args) {
-        CarFactory factory = new CarFactory();
-        factory.create("dazhong").makeCar();
-        factory.create(BaoMaCar.class).makeCar();
+        ICar factory = new BaoMaCarFactory().create();
+        factory.makeCar();
     }
 }
