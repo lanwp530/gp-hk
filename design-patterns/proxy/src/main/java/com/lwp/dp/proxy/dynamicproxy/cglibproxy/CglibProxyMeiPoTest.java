@@ -2,6 +2,7 @@ package com.lwp.dp.proxy.dynamicproxy.cglibproxy;
 
 import com.lwp.dp.proxy.Girl;
 import com.lwp.dp.proxy.Person;
+import net.sf.cglib.core.DebuggingClassWriter;
 
 import java.lang.reflect.Method;
 
@@ -12,6 +13,8 @@ import java.lang.reflect.Method;
 public class CglibProxyMeiPoTest  {
 
     public static void main(String[] args) {
+
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "E://cglib_proxy_classes");
 
         Object instance = null;
         try {
