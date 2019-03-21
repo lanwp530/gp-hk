@@ -6,8 +6,8 @@ package com.lwp.dp.adapter.mediaplay;
  */
 public class MediaAdapterTest {
     public static void main(String[] args) {
-        new MediaAdapter().play("测试媒体");
-        new MediaAdapter().play("MP3");
-        new MediaAdapter().play("MP4");
+        new MediaAdapter().play("没有","测试媒体");
+        new MediaAdapter().play("MP3", "十年");
+        new MediaAdapter().play("MP4", "封神");
     }
 }
